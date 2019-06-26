@@ -1,0 +1,31 @@
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+form {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.index-wrap {
+  position: relative; /*必ず必要*/
+  z-index: 2; /*必ず必要*/
+}
+
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  background-size: cover;
+}

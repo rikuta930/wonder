@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <h1 class="navbar-brand">wonder</h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../build.php">Team Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../friends.php">Participants</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./php_lesson1.html">PHP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./sql_lesson1.html">SQL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./advanced_lesson1.html">Advanced PHP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../wonder.html">How To Make App?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./wonder_lesson1.html">How To Make wonder?</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-5">
+      <h1 class="text-success">５分でわかるPHP文法シリーズ</h1>
+      <hr />
+      <p>次はif文です。英語のifは、仮定法とかで使いますよね。「もし～なら・・・・」みたいに使ってた記憶があります。多分、そうですよね。プログラミングのif文もそんな感じです。結構簡単なので、身構えずに、ぼちぼち行きましょう。</p>
+      <hr />
+      <h2 class="text-info mt-2">if文</h2>
+      <hr />
+      <p>if文は、（）の中の条件が成り立つ場合に、｛｝の中の処理を実行します。</p>
+      <p>例題として、夜ごはんは、口が完全にジンギスカンの気分の人がいるとします。<br>もし、変数の中がジンギスカンなら、「うまい」と言わせましょう</p>
+        <pre class="bg-light">
+            <code>
+                $dinner = 'ジンギスカン';
+                if ($dinner == 'ジンギスカン') {
+                    echo "・・・うまい！";
+                }
+            </code>
+        </pre>
+        <p>喜んでくれたみたいですね。</p>
+        <p>えーと、それでは、さらに複雑にしてみましょう。if文は「もしも～であれば・・・それとも～であれば・・・いずれでもなければ・・・・」というように多岐分岐が可能なので、複雑な心境も表すことができます。</p>
+        <p>たとえば、先ほどの人を例に出しましょう。口が完全にジンギスカンの気分の人は「もし夜ご飯がジンギスカンであれば」うまいと呟きましたよね</p>
+        <pre class="bg-light">
+                    <code>
+                        $dinner = 'ジンギスカン';
+                        if ($dinner == 'ジンギスカン') {
+                            echo "・・・うまい！";
+                        }
+                    </code>
+                </pre>
+        <p>しかし、今の時間は23時半だとしましょう。疲れた彼には、ジンギスカンのお店を探す体力は残っていませんでした。駅を降りると、チェーンの牛丼屋が見えました。</p>
+        <p>「妥協することも大事」と、自分に言い聞かせるでしょう。</p>
+        <pre class="bg-light">
+                    <code>
+                        $dinner = '牛丼';
+                        if ($dinner == 'ジンギスカン') {
+                            echo "・・・うまいな";
+                        } elseif($dinner == '牛丼') {
+                            echo "妥協することも大事";
+                        }
+                    </code>
+                </pre>
+        <p>つい先月、彼は先祖代々続いてきた家具屋さんを机と椅子以外売らないというポリシーを捨てることができず、つぶしてしまいました。牛丼屋に入ってもお金が勿体ないだろうと、彼は牛丼屋には入らずに、家路を急いだとしましょう。家に帰ると、既に妻と娘は寝ていました。明かりをつけると、机に冷え切ったカレーがポツンと置かれ、「お父さん、いつもありがとう」と書かれた手紙とプレゼントが置かれていました。今日は父の日だったのです。</p>
+        <p>この時の彼の感情はどうなるでしょうか</p>
+        <pre class="bg-light">
+        <code>
+        $dinner = '家族の温かさと冷え切ったカレーライス';
+        if ($dinner == 'Genghis Khan') {
+            echo "・・・うまいな";
+        } elseif ($dinner == '牛丼') {
+            echo "妥協することも大事";
+;        } else {
+            echo "・・・・";
+        }
+        </code>
+        </pre>
+        <p>「いずれでもなければあまりの嬉しさに言葉を失う」になりますね。</p>
+        <p>このように、複雑なものを表す時に必須の文法なので、覚えておきましょう。（ふざけてすみませんでした。まじめな説明を見たい方は<a href="https://www.w3schools.com/php7/php7_if_else.asp">こちら</a>がおすすめです。英語ですが、プログラミングの勉強は基本、英語のドキュメントのほうが最新版であったり、正確である場合が僕の体感としては多いと思います。）</p>
+    </div>
+    <a href="./php_lesson3.html" class="mx-auto btn btn-success m-2 d-block">次へ</a>
+    <div class="p-3 mb-2 bg-light text-dark">
+        <p class="float-right">
+            Copyright © 2019 Rikuta Hiratsuka All Rights Reserved.
+        </p>
+    </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

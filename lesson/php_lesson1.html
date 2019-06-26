@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <h1 class="navbar-brand">wonder</h1>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="../index.php"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../build.php">Team Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../friends.php">Participants</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./php_lesson1.html">PHP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./sql_lesson1.html">SQL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./advanced_lesson1.html"
+                >Advanced PHP</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../wonder.html">How To Make App?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./wonder_lesson1.html"
+                >How To Make wonder?</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-5">
+      <h1 class="text-success">５分でわかるPHP文法シリーズ</h1>
+      <hr />
+      <p>
+        私もまだ勉強中の身ですが、PHPについて、簡単に説明させていただこうと思います。
+      </p>
+      <p>
+        プログラミング言語は、言語、つまりは英語や、日本語と同じように、文法とフレーズが存在します。<br />しかし、覚えなければならないものはめちゃくちゃ少ないです。<br />基本的にPHPで覚えておかなければいけない文法は変数とif文と繰り返し構文の3つです。
+      </p>
+      <hr />
+
+      <h2 class="text-info mt-2">変数</h2>
+      <hr />
+      <p>
+        変数とは<span class="text-primary">文字や数字を入れる箱</span
+        >のことを言います。$のあとに単語を続けて変数を用意し、＝で代入します　＊プログラミングは、＝が代入の意味として使われます。
+      </p>
+      <pre class="bg-light">
+    <code>
+        $length = 5;
+    </code>
+    </pre>
+      <p>
+        変数を使うメリットは二つです。1つ目は、変数を使うと、そのデーターが何のデータなのかがわかりやすい！ということです。上のコードを見てみましょう。英語の”length”という単語の意味は「長さ」ですよね。箱に名前がついていることで、５という数字が、長さなんだなということが、わかると思います。
+      </p>
+      <p>
+        ２つ目は、変数を使うと、複数回使うデータがあった場合、何か変更点があったとき、１か所の変更で済む、ということです。ちょっと、わかりにくいので、下の例で説明します。
+      </p>
+      <p>
+        とある家具屋さんが、あまりの売れ行きの悪さに、全品20％オフを決意しました。元々テーブルが5000円、椅子が1500円で売られていたのを、20％オフにした値段をPHPで計算して表示すると・・・・
+      </p>
+      <pre class="bg-light">
+    <code>
+        //元の値段
+        $table = 5000;
+        $char = 1500;
+
+        //20%オフの値段
+
+        $discount = 0.8;
+
+        echo $table * $discount;
+        echo $char * $discount;
+    </code>
+    </pre>
+
+      <p>
+        上のようになります。まずは$table
+        $charという変数に、テーブルと、椅子の値段を代入しています。次に、$discountに0.8、つまり80％の値段になるように値を代入し、下の2行で計算しています。<br />
+        ここで出てくる<span class="text-success">echo</span
+        >というのは、文字を表示するための関数というものです。関数とはいろいろな便利機能を使うためのフレーズだと考えるとわかりやすいと思います。文字を出力したい、文字の数を数えたいなど、いろいろなやりたいことがあったときに唱えるものです。
+        <br />ちなみに、<a
+          href="https://www.php.net/manual/ja/function.echo.php"
+          >PHPマニュアル</a
+        >に関数がたくさん載ってるので、辞書のように、わからないものがあったら、その都度調べてみてください！フレーズと、例文がたくさん載っている無料の辞書みたいなものです。
+      </p>
+      <p>*は、数学の「かける（×）」と同じ意味です。</p>
+
+      <p>
+        さて、こうして、値段が計算できたわけですが、お店では結局家具は思ったように売れませんでした。困った店長は、まさかの40％オフを決意しました。
+      </p>
+      <p>
+        これを計算するとき、上の変数を使ったやり方だと、$discount =
+        0.8　となっているところを$discount =
+        0.６　とすれば、終了です。しかし、変数を使っていないと、どうなるでしょう。$discountの部分に０．６を書かなければいけませんよね。しかも、このお店は机と椅子しか取り扱っていませんが、商品が膨大な数のお店ならどうなるでしょう。（　＾ω＾）・・・
+      </p>
+      <p>
+        面倒ですよね。変数は、面倒な手間を省くための必須の文法ですので、覚えておきましょう！
+      </p>
+
+      <a href="./php_lesson2.html" class="mx-auto btn btn-success m-2 d-block"
+        >次へ</a
+      >
+      <div class="p-3 mb-2 bg-light text-dark">
+        <p class="float-right">
+          Copyright © 2019 Rikuta Hiratsuka All Rights Reserved.
+        </p>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
